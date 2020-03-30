@@ -23,4 +23,4 @@ Each burger in the waiting area also has a "Devour it!" button. When the user cl
 ## Got Questions? 
 ### Ask Me:
 * GitHub Profile: https://github.com/lalliere
-* My Email: emilylallier@yahoo.com
+* My Email: emilylallier@yahoo.com 
