@@ -1,15 +1,18 @@
 body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: #c9e7ff;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 li {
     padding: 5px;
     margin: 5px;
     background: #c9e7ff;
-}
-
-.label {
-    font-weight: bold;
 }
 
 .form-group {
@@ -26,7 +29,16 @@ li {
     font-weight: bold;
 }
 
-h1 {
-    text-align: center;
-    color: rgb(23, 23, 143);
-}
+ /* label color */
+ .input-field label {
+    color: red;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: blue;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid purple;
+    box-shadow: 0 1px 0 0 orange;
+  }
