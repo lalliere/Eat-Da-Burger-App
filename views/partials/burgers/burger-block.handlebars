@@ -1,11 +1,18 @@
 <li>
-	{{burger_name}}
+	<i class="tiny material-icons">fastfood</i>
 
-	<button class="change-eaten" data-id="{{this.id}}" data-newEaten="{{eaten}}">
-		{{#if eaten}}Reorder{{else}}EAT. DA. BURGER{{/if}}
-	</button>
+	{{name}}
+
+	{{#unless eaten}}
+		<button class="eat-burger btn-submit green darken-3 white-text" data-id="{{id}}">
+		EAT. DA. BURGER
+		</button>
+	{{/unless}}
 	
-	<button class="delete-burger" data-id="{{this.id}}">Delete</button>
+	<button class="delete-burger btn-submit green darken-3 white-text" data-id="{{this.id}}">Delete</button>
 	
 
+	{{!-- <button class="change-status btn-submit green darken-3 white-text" data-id="{{id}}" data-newStatus="{{eat}}">
+		{{#if eat}}Reorder{{else}}EAT. DA. BURGER{{/if}}
+	</button> --}}
 </li>
