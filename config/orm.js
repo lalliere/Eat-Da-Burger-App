@@ -1,14 +1,14 @@
 const connection = require("../config/connection.js");
 
-// function printQuestionMarks(num) {
-//     var arr = [];
+function printQuestionMarks(num) {
+    let arr = [];
 
-//     for (var i = 0; i < num; i++) {
-//         arr.push("?");
-//     }
+    for (let i = 0; i < num; i++) {
+        arr.push("?");
+    }
 
-//     return arr.toString();
-// }
+    return arr.toString();
+}
 
 function objToSql(ob) {
     let arr = [];
@@ -34,6 +34,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 let orm = {
+    //Select all burgers
     all: function (tableInput, cb) {
         let queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
@@ -44,17 +45,9 @@ let orm = {
         });
     },
 
+    //Create new burger
     create: function (table, cols, vals, cb) {
-        let queryString = "INSERT INTO " + table;
-        //INSERT INTO burgers ()
-
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += "?,?";
-        queryString += ") ";
-
+        let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`;
 
         console.log(queryString);
 
@@ -68,13 +61,9 @@ let orm = {
     },
     
     // An example of objColVals would be {name: panther, sleepy: true}
+    //Update a Burger
     update: function (table, objColVals, condition, cb) {
-        let queryString = "UPDATE " + table;
-
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
+        let queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
 
         console.log(queryString);
         connection.query(queryString, function (err, result) {
@@ -86,10 +75,9 @@ let orm = {
         });
     },
 
+    //Delete burger
     delete: function (table, condition, cb) {
-        let queryString = "DELETE FROM " + table;
-        queryString += " WHERE ";
-        queryString += condition;
+        let queryString = `DELETE FROM ${table} WHERE ${condition}`;
 
         connection.query(queryString, function (err, result) {
             if (err) {
