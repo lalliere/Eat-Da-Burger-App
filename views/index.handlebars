@@ -1,6 +1,27 @@
-<h1>Eat-Da-Burger</h1>
+<h1 class="center-align">Eat-Da-Burger</h1>
+
 
 <h2>Mouth-Watering Burgers Waiting to be Devoured:</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col m6">
+      <div class="carousel">
+        <a class="carousel-item">
+          <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgers/burger-block eaten=false}}
+            {{/unless}}
+            {{/each}}
+          </ul>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- <h2>Mouth-Watering Burgers Waiting to be Devoured:</h2>
 
 <ul>
   {{#each burgers}}
@@ -8,17 +29,29 @@
       {{> burgers/burger-block eaten=false}}
     {{/unless}}
   {{/each}}
-</ul>
+</ul> --}}
 
 <h2>Burger Battles Won:</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burgers/burger-block eaten=true}}
-    {{/if}}
-  {{/each}}
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col m6">
+      <div class="carousel">
+        <a class="carousel-item">
+          <ul>
+            {{#each burgers}}
+              {{#if eaten}}
+                {{> burgers/burger-block eaten=true}}
+              {{/if}}
+            {{/each}}
+          </ul>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <h2>Add a Burger to be Devoured:</h2>
 
