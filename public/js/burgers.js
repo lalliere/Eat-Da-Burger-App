@@ -2,7 +2,7 @@
 $(function() {
     $(".change-eaten").on("click", function(event) {
       let id = $(this).data("id");
-      let newEaten = $(this).data("newEaten");
+      let newEaten = $(this).attr("data-newEaten");
   
       let newEatenState = {
         eaten: newEaten
@@ -14,7 +14,7 @@ $(function() {
         data: newEatenState
       }).then(
         function() {
-          console.log("changed state of being consumed to:", newEaten);
+          console.log("Changed state of being consumed to:", newEaten);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -27,7 +27,7 @@ $(function() {
   
       let newBurger = {
         name: $("#burgName").val().trim(),
-        eaten: $("[name=eaten]:checked").val().trim()
+        eaten: $("[name=status]:checked").val().trim()
       };
   
       // Send the POST request.
