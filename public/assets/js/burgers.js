@@ -3,32 +3,32 @@
 $(document).ready(function () {
 
   $(".change-status").on("click", function () {
-    console.log("testing")
-    // let id = $(this).data("id");
-    // let newState = $(this).data("newStatus");
+    // console.log("testing")
+    let id = $(this).data("id");
+    let newState = $(this).data("newStatus");
 
-    // let newEatState = {
-    //   eaten = newState
-    // };
+    let newEatState = {
+      eaten = newState
+    };
     
-    // // Send the PUT request.
-    // $.ajax("/api/burgers/" + id, {
-    //   type: "PUT",
-    //   data: newEatState
-    // }).then(
-    //   function () {
-    //     console.log("Changed state of being consumed to", newState);
-    //     // Reload the page to get the updated list
-    //     location.reload();
-    //   }
-    // );
+    // Send the PUT request.
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+      data: newEatState
+    }).then(
+      function () {
+        console.log("Changed state of being consumed to", newState);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
   });
 
   $(".create-form").on("submit", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    console.log("test");
+    // console.log("test");
 
 
     let newBurger = {
