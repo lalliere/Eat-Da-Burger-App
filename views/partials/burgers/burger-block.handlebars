@@ -3,16 +3,12 @@
 
 	{{name}}
 
-	{{#unless eaten}}
-		<button class="eat-burger btn-submit green darken-3 white-text" data-id="{{id}}">
-		EAT. DA. BURGER
-		</button>
-	{{/unless}}
-	
-	<button class="delete-burger btn-submit green darken-3 white-text" data-id="{{this.id}}">Delete</button>
-	
 
-	{{!-- <button class="change-status btn-submit green darken-3 white-text" data-id="{{id}}" data-newStatus="{{eat}}">
-		{{#if eat}}Reorder{{else}}EAT. DA. BURGER{{/if}}
-	</button> --}}
+	<button id="change-status" class="change-status btn-submit green darken-3 white-text" data-newStatus="{{eaten}}" data-id="{{id}}"> 
+		{{#if eaten}}Reorder{{else}}EAT. DA. BURGER{{/if}}
+	</button>
+
+	
+	<button class="delete-burger btn-submit green darken-3 white-text" data-id="{{id}}">Delete</button>
+	
 </li>
