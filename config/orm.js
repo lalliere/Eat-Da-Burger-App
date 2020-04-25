@@ -24,7 +24,7 @@ function printQuestionMarks(num) {
           value = "'" + value + "'";
         }
         // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
+        // e.g. {eaten: true} => ["eaten=true"]
         arr.push(key + "=" + value);
       }
     }
@@ -47,8 +47,8 @@ let orm = {
 
     //Create new burger
     create: function (cols, vals, cb) {  
-        let queryString = "INSERT INTO burgers ";
-        queryString += "(";
+        console.log(cols);
+        let queryString = "INSERT INTO burgers (";
         queryString += cols.toString();
         queryString += ") VALUES (";
         queryString += printQuestionMarks(vals.length);
