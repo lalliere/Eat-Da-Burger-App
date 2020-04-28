@@ -9,7 +9,7 @@ router.get("/", function (req, res) {
   
   burger.all(function (data) {
     let burgObj = {
-      burgers: data
+      burger: data
     };
     
     console.log(burgObj);
@@ -38,7 +38,7 @@ router.put("/api/burgers/:id", function (req, res) {
 
   burger.update(
     {
-    eaten: req.body.eaten
+    eaten: true
     }, condition, function (result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
