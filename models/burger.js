@@ -2,7 +2,7 @@
 const orm = require("../config/orm.js");
 
 
-const burger = {
+let burger = {
   all: function(cb) {
     orm.all(function(res) {
       cb(res);
