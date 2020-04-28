@@ -1,0 +1,15 @@
+<li>
+	<i class="tiny material-icons">fastfood</i>
+
+	{{name}}
+
+	{{#unless eaten}}
+		<button class="eat-burger btn-submit green darken-3 white-text" data-id="{{id}}"> 
+			EAT. DA. BURGER
+		</button>
+	{{/unless}}
+
+	
+	<button class="delete-burger btn-submit green darken-3 white-text" data-id="{{this.id}}">Delete</button>
+	
+</li>
