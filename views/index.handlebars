@@ -11,9 +11,9 @@
               <hr>
               <p>
                 <ul>
-                  {{#each burgers}}
+                  {{#each burger}}
                   {{#unless eaten}}
-                  {{> burgers/burger-block eaten=false}}
+                  {{> burgers/burgers-block}}
                   {{/unless}}
                   {{/each}}
                 </ul>
@@ -30,10 +30,10 @@
               <hr>
               <p>
                 <ul>
-                  {{#each burgers}}
-                    {{#if eaten}}
-                      {{> burgers/burger-block eaten=true}}
-                    {{/if}}
+                  {{#each burger}}
+                  {{#if eaten}}
+                  {{> burgers/burgers-block}}
+                  {{/if}}
                   {{/each}}
                 </ul>
               </p>
@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container createBurger">
     <div class="row">
       <div class="col s12">
         <div>
