@@ -1,15 +1,15 @@
 <li>
-	<i class="tiny material-icons">fastfood</i>
+	<i class="tiny material-icons" style="color: #2e7d32;">fastfood</i>
 
 	{{name}}
 
 	{{#unless eaten}}
-		<button class="eat-burger btn-submit green darken-3 white-text" data-id="{{id}}"> 
-			EAT. DA. BURGER
+		<button class="eat-burger btn-floating btn-small pulse green darken-3 white-text" style="border: none" data-id="{{id}}"> 
+			Eat
 		</button>
 	{{/unless}}
 
 	
-	<button class="delete-burger btn-submit green darken-3 white-text" data-id="{{this.id}}">Delete</button>
+	<button class="delete-burger" style="color: black; background: transparent; border: none;" data-id="{{this.id}}"><i class="tiny material-icons">delete</i></button>
 	
 </li>
