@@ -2,7 +2,15 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #c9e7ff;
+    background-image: url(../img/burgerpic.jpg);
+}
+
+.uneaten-burger-list {
+    background: #a89c96d2;
+}
+
+.eaten-burger-list {
+    background: #a89c96d2;
 }
 
 main {
@@ -12,33 +20,18 @@ main {
 li {
     padding: 5px;
     margin: 5px;
-    background: #c9e7ff;
 }
 
-.form-group {
-    margin-bottom: 5px;
+
+.burger-label {
+    color: black;
 }
 
-.create-update-form {
-    padding: 5px;
-    margin: 5px;
+.createBurger {
+    background: #a89c96d2;
 }
 
-.change-eaten {
-    color: blue;
-    font-weight: bold;
+.cr-brg-h4 {
+    color: #2e7d32;
+    margin: 0;
 }
-
- /* label color */
- .input-field label {
-    color: red;
-  }
-  /* label focus color */
-  .input-field input[type=text]:focus + label {
-    color: blue;
-  }
-  /* label underline focus color */
-  .input-field input[type=text]:focus {
-    border-bottom: 1px solid purple;
-    box-shadow: 0 1px 0 0 orange;
-  }
