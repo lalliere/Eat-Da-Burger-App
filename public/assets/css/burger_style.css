@@ -35,3 +35,21 @@ li {
     color: #2e7d32;
     margin: 0;
 }
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+  
+    #appname {
+      font-size: 18pt;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+  
+    #appname {
+      font-size: 15pt;
+    }
+}
