@@ -3,11 +3,11 @@
 
 	{{name}}
 	
-	{{#if eaten}}<button class="change-eaten green darken-3 white-text" data-id="{{id}}" data-neweat="{{eaten}}">Reorder</button>
+	{{#if eaten}}<button class="change-eaten btn-flat" style="color: #2e7d32; background: transparent; border: none;" data-id="{{id}}" data-neweat="{{eaten}}"><i class="tiny material-icons">loop</i></button>
 		{{else}}<button class="change-eaten eat-burger btn-floating btn-small pulse green darken-3 white-text" style="border: none" data-id="{{id}}" data-neweat="{{eaten}}">EAT</button>
 	{{/if}}
 
 
-	<button class="delete-burger" style="color: black; background: transparent; border: none;" data-id="{{this.id}}"><i class="tiny material-icons">delete</i></button>
+	<button class="delete-burger btn-flat" style="color: black; background: transparent; border: none;" data-id="{{this.id}}"><i class="tiny material-icons">delete</i></button>
 	
 </li>
