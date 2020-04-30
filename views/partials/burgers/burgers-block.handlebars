@@ -2,14 +2,12 @@
 	<i class="tiny material-icons" style="color: #2e7d32;">fastfood</i>
 
 	{{name}}
-
-	{{#unless eaten}}
-		<button class="eat-burger btn-floating btn-small pulse green darken-3 white-text" style="border: none" data-id="{{id}}"> 
-			Eat
-		</button>
-	{{/unless}}
-
 	
+	{{#if eaten}}<button class="change-eaten green darken-3 white-text" data-id="{{id}}" data-neweat="{{eaten}}">Reorder</button>
+		{{else}}<button class="change-eaten eat-burger btn-floating btn-small pulse green darken-3 white-text" style="border: none" data-id="{{id}}" data-neweat="{{eaten}}">EAT</button>
+	{{/if}}
+
+
 	<button class="delete-burger" style="color: black; background: transparent; border: none;" data-id="{{this.id}}"><i class="tiny material-icons">delete</i></button>
 	
 </li>
