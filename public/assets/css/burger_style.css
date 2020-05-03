@@ -36,7 +36,18 @@ li {
     margin: 0;
 }
 
+.reorderBtn {
+    padding: 0;
+}
 
+.deleteBtn {
+    padding: 0;
+}
+
+.eat-burger {
+    margin-right: 10px;
+    margin-left: 10px;
+}
 
 
 
